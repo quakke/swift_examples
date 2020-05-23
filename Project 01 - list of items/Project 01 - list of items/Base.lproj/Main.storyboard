@@ -59,6 +59,7 @@
                                     <outlet property="nameLabel" destination="yQX-uc-tvT" id="hzU-Hr-nVV"/>
                                     <outlet property="photoImageView" destination="5M0-Nh-cMn" id="MRV-4t-uo9"/>
                                     <outlet property="ratingControl" destination="gzT-iL-xFl" id="YR9-yM-U4r"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" identifier="ShowDetail" id="A4N-93-scr"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -145,7 +146,11 @@
                                 <action selector="cancel:" destination="BYZ-38-t0r" id="vGv-8K-3NH"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="E8B-5C-q7B"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="E8B-5C-q7B">
+                            <connections>
+                                <segue destination="Hfy-Qb-dXi" kind="unwind" unwindAction="unwindToMealListWithSender:" id="9hL-07-fbg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mealNameLabel" destination="QlT-Xw-Gir" id="Vaw-cy-fUw"/>
@@ -156,6 +161,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="Hfy-Qb-dXi" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="0br-zd-K84">
                     <connections>
                         <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="j82-mh-Fx7"/>
@@ -198,9 +204,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6A-iS-yxC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
+            <point key="canvasLocation" x="1017" y="495"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Jm4-2h-Qu7"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="defaultPhoto" width="320" height="320"/>
     </resources>
