@@ -1,0 +1,6 @@
+module Pods_Project_2___Animations {
+  umbrella header "Pods-Project 2 - Animations-umbrella.h"
+
+  export *
+  module * { export * }
+}
